@@ -1,0 +1,170 @@
+Brief Introduction
+This is my attempt to provide a framework for the rev gamemode rework.  I don’t know if anyone else is actively working on it and I have no desire to compete with anyone.  I attempted to keep feature bloat to a minimum and make use of existing game systems while also providing a level of depth and opportunities for player choices to be meaningful.
+ A criticism of the original rev gamemode was that it consisted of exponentially growing mobs of people hunting down and murdering heads, innocent crew members, and each other.  The following is my attempt to create mechanics, player incentives, and constraints that allow for more interesting and diverse rounds while maintaining the overall theme of revs.  
+I cannot possibly imagine that the ideas below are perfect or above criticism in anyway.  In fact, I would deeply appreciate feedback and criticism.  It is not my intention to attempt to define this gamemode by myself, and all that I ask is that if you have a valid criticism, please share it, and go just a bit further to suggest a possible solution.  I don’t want to end up in an oppositional conversation where I am trying to defend my ideas rather than simply explain and improve them.  
+Thank you for your time and I hope what follows is somewhat interesting.
+
+Revolutionaries Game Mode Rework
+The goal of Revolutionaries is to radically destabilize the existing power structure of a station.  It is an organized and planned conspiracy led by Head Revolutionaries but only made feasible by the support of their followers.  The round will start with 1 Head Rev and 3-6 Initial Revs (depending on pop)  
+Head Revolutionaries must establish a moveable Base of Operations and make use of two resources to entice crewmembers to join their cause: Charisma and Fear. 
+Charisma represents the crew’s positive perception of the Revolutionaries.  Charisma is earned by and actively by completing certain non-lethal objectives (Dissidence) and Revolutionaries being killed (Martyrdom)
+ Fear represents the crew’s doubts about NanoTrasen’s ability to keep them safe.  Fear is by completing certain (usually) violence-oriented objectives (Terrorism).  
+Fear and Charisma can be spent by Revolutionaries by using abilities in conjunction with megaphones (see further down) that can convert crewmembers. 
+A Base of Operations is established by a Head Revolutionary placing a Revolutionary Flag somewhere on the station.  The Flag inspires Revolutionaries and slowly generates Charisma and Fear.  The Flag can be used by Revolutionaries to view objectives and “turn in” objectives that will provide Charisma or Fear.  The Flag may be moved, but Charisma and Fear can only be generated, and certain objectives can only be completed while the Flag is deployed.  Crew opposing the revolutionaries may attempt to Burn the Flag to prevent their influence from growing.  
+The crew aims to discover, identify, and destroy the Revolutionary threat before it takes over the station.  There are Major and Minor victory conditions for both sides.
+
+
+Design and Strategy Consideration
+The intent behind these mechanics is to incentivize the Revs to cooperate, prepare, and strategize rather than simply flooding the station with violence.  The dynamic between the Charisma and Fear resources allows them to gain power by freely selecting between two different playstyles.  Revs without significant manpower and armaments are encouraged to focus on building a base of operations by stealthily stealing supplies and earn the power to convert crew through Charisma by doing so.  Once the Revs are discovered, they will benefit from completing more aggressive objectives like stealing more weaponry and eliminating security officers and heads.  The Base of Operations is, in my view, critical for centralizing and organizing what would be an otherwise uncoordinated mob of greytiders.  I am aware that the conversion mechanics are significantly weaker than the original implementation, but again this is done to incentivize cooperation.  Although a 50% chance of failure and exposure is frightening, consider that multiple Revs can attempt to convert the same target, and there is only a 5 second cooldown.  This allows Revs of groups of 3 or more to have very good odds of bruteforcing the conversion chance and contributes to the larger theme of “strength in numbers” against a powerful minority.  It also incentivizes Revs to stockpile as much Fear and Charisma as possible before trying to mass convert the station, as opposed to lone-wolfing and failing.  I really think that, if properly implemented, these mechanics will be both LRP and MRP friendly and create enjoyable memories of a somewhat realistic rebellion on the station.  
+New Content
+•	2 (technically 3) new roles
+•	Abilities powered by resource pools (see further down)
+•	3 new items
+o	Revolutionary Flag, Megaphone, Revolutionary Headset Encryption Key
+•	Resource pools to be consumed by abilities
+o	Fear and Charisma are not shared pools.  Every rev has their own pool of Fear and Charisma, but they all receive additions to these resources if they become a Rev when these resources are generated.
+•	Revolutionary Objectives (viewed by interacting with Flag)
+•	Win Conditions for Revs and Crew
+Roles
+•	Head Revolutionary
+o	1 per round
+o	Responsible for organizing Revolutionaries
+o	Recommend antag role timer like Nukie Commander
+o	Starts with Revolutionary Flag and box of Megaphones
+o	Headset has Revolutionary encryption key
+•	(initial) Revolutionary 
+o	Takes orders from Head Revolutionary
+o	Starts with a megaphone
+o	Headset has encryption key
+•	(converted) Revolutionary
+o	Takes orders from Head Revolutionary
+o	Should try to get their hands on a megaphone
+Revolutionary Items
+•	Revolutionary Flag 
+o	Very large item
+o	Takes up most of a backpack but leaves space for Emergency Box and one Box of Megaphones
+o	Must unpacked when placed on the floor
+o	Must be packed to fit in a backpack
+o	Can be anchored or unanchored, pulled when unanchored
+o	Must be unanchored to packed
+o	Can be interacted with to view Revolutionary objectives
+o	Creates a “zone of influence” called the Base of Operations (5x5 tiles?)
+o	Certain objectives require items to enter the Base of Operations to be completed
+o	Provides 10 Charisma and 10 Fear to all Revs per minute while deployed and anchored
+o	Flammable, can be burned and destroyed
+o	Head Rev starts with it in their backpack
+
+•	Megaphone 
+o	Small item, 2x1.
+o	Can be turned on and off, no battery needed
+o	When on, all dialogue is shouted and text is bold with exclamation points
+o	Must be in hand and on for Revolutionary abilities to work
+o	Not considered contraband (would be nice if they appeared in maints, sec, command, clown closet)
+o	Revs click on their target with megaphone in hand after toggling convert ability
+•	Box of Megaphones
+o	It’s a box of 6 megaphones.  Head Rev starts with one.
+Revolutionary Abilities
+Passives
+•	Martyrdom 
+o	The first time you die, all other Revolutionaries gain 10 Charisma
+•	Champion of the People (Head Rev only)
+o	Slowly regenerate health when inside your Base of Operations
+Charisma Abilities
+•	Persuade (All Revs)
+o	Must have megaphone in hand
+o	Cost: 100 Charisma
+o	Channeled ability (3 seconds?)
+o	You shout a persuasive manifesto into your megaphone “<random_charisma_phrase>.” If you are not interrupted, your target has a 50% chance of being converted.  
+o	If successful, they will immediately shout “random_charisma_phrase” back to you.
+	Captain immune
+o	5 second cooldown (“You need to catch your breath”)
+•	Rousing Speech (Head Rev only)
+o	Must have megaphone in hand
+o	Cost: 500 Charisma
+o	Channeled ability (5 seconds?)
+o	You shout an impassioned speech into your megaphone “<random_charisma_phrase>.”  If you are not interrupted, your target has a 100% chance to be converted.
+	Captain immune
+o	If successful, they will immediately shout “random_charisma_phrase” back.
+Fear Abilities
+•	Threaten
+o	Cost: 100 Fear
+o	Channeled ability (3 seconds?)
+o	You deliver a frightening manifesto through your megaphone (<“random_fear_phrase”>).  If you are not interrupted, your target has a 50% chance to be converted.
+	10% if Head
+	Captain immune 
+o	5 second cooldown (“You need to catch your breath”)
+•	Terrify
+o	Cost: 500 Fear
+o	Channeled ability (3 seconds?)
+o	You deliver a terrifying speech through your megaphone (<“random_fear_phrase”>).  If you are not interrupted, your target has a 100% chance to be converted.
+	Captain immune 
+o	5 second cooldown (“You need to catch your breath”)
+Revolutionary Objectives
+Charisma Objectives
+•	Bring <charisma_item_list item> to your Base of Operations as a trophy.
+o	+X Charisma to all Revolutionaries
+o	Charisma value is determined by item type
+•	Convert <Urist McBalls>, <Job Title>
+o	+25 Charisma to all Revolutionaries
+o	+50 Charisma to all Revolutionaries if the target was a Clown, Mime, or Bartender
+o	+200 Charisma to all Revolutionaries if the Target was a Head.
+•	Bring a <gorilla, chicken, cow, (insert animal here)> to your Base of Operations to serve as your mascot.
+o	+200 Charisma to all Revolutionaries
+o	The animal becomes sentient.
+o	-100 Charisma to all Revolutionaries if the mascot dies.
+
+
+Fear Objectives
+•	Bring <fear_item_list item> to your Base of Operations to equip your movement.
+o	+X Fear to all Revolutionaries
+o	Fear value is determined by item type
+•	Kill <Urist McBalls>, <Job Title>
+o	+25 Fear to all Revolutionaries
+	OR
+o	+50 Fear if the target was a Security Officer, Cadet, or Warden
+o	+100 if the target was a Head.
+o	+500 if the target was Captain
+•	Bring the Nuclear Bomb and Disk to your Base of Operations to serve as a deterrent.
+o	+500 Fear for Bomb
+o	+500 Fear for Disk
+Win/Lose Conditions:
+Revolutionaries achieve Major Victory if:
+•	If all Heads are either converted (excluding Captain) or killed (including Captain)
+o	AND
+•	At least 50% of the living crew is converted
+Revolutionaries achieve Minor Victory if, by the time Evac reaches Centcomm
+•	The majority of the living crew remaining on the station are converted
+Crew achieves Major Victory if, by the time Evac reaches CentComm;
+•	All Revolutionaries are either dead or in custody.
+Crew achieves Minor Victory if, by the time Evac reaches CentComm:
+•	The minority of the crew of the crew was Converted
+
+
+
+
+
+Charisma/Fear Item Lists
+Non-exhaustive, welcome to further ideas
+•	Charisma
+o	Foods/Drinks
+o	Plushies
+o	Bruise Packs/Ointment
+o	Gold
+o	Instruments
+o	EVA suits
+o	Insulated gloves
+o	Air tanks
+o	Plants?
+
+                             
+•	Fear
+o	Stun batons
+o	Handcuffs
+o	Guns
+o	Spears
+o	Grenades
+o	Plasma tanks
+o	Welding fuel tanks
+
+
+
